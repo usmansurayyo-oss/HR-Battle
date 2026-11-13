@@ -37,7 +37,7 @@ h2{font-size:1.15rem;margin:0 0 10px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
 .goal{color:var(--mute);margin:0}
 .video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video{display:block}.video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:48px;border-radius:12px;background:#e00;color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center}.btn{display:inline-block;background:var(--accent);color:var(--card);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 14px}.vbad{color:var(--warn);margin:8px 0 0}.ok{color:var(--accent);font-weight:700}.bad{color:var(--warn);font-weight:700}.row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.row img{width:96px;height:54px;object-fit:cover;border-radius:6px;background:#000;flex:none}
 .vlinks{margin:10px 0 0;font-size:15px}
 .vlinks p{margin:6px 0}
 .idea{background:var(--accent-soft);border-color:transparent}
@@ -56,6 +56,18 @@ footer{color:var(--mute);font-size:13px;margin-top:26px}
 """
 
 
+THUMB_JS = """<script>
+// Удалённые или закрытые видео отдают заглушку 120×90 или ошибку загрузки
+document.querySelectorAll('.video img').forEach(function (img) {
+  function warn() { var b = img.closest('.card').querySelector('.vbad'); if (b) b.hidden = false; }
+  function chk() { if (img.naturalWidth <= 120) warn(); }
+  img.addEventListener('load', chk);
+  img.addEventListener('error', warn);
+  if (img.complete && img.naturalWidth) chk();
+});
+</script>"""
+
+
 def page(title, body):
     return f"""<!doctype html>
 <html lang="ru"><head><meta charset="utf-8">
@@ -66,7 +78,9 @@ def page(title, body):
 {body}
 <footer>{html.escape(AUTHOR)} «{html.escape(BOOK)}». Учебное пособие. Ташкент, 2026.<br>
 Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
-</main></body></html>
+</main>
+{THUMB_JS}
+</body></html>
 """
 
 
@@ -93,10 +107,11 @@ def lesson_html(L, prev, nxt):
 
 <section class="card">
 <h2>▶ Видео к занятию</h2>
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{vid}" title="{html.escape(vtitle)}" loading="lazy"
- allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<a class="video" href="{yt(vid)}" data-vid="{vid}">
+<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy"><span class="play">▶</span></a>
+<p class="vbad" hidden>Это видео сейчас недоступно на YouTube. Посмотрите дополнительное видео ниже.</p>
 <div class="vlinks">
-<p><a href="{yt(vid)}">{html.escape(vtitle)}</a> — открыть в YouTube</p>
+<p><a class="btn" href="{yt(vid)}">▶ Смотреть: {html.escape(vtitle)}</a></p>
 <p>Дополнительно: <a href="{yt(evid)}">{html.escape(etitle)}</a></p>
 </div>
 </section>
@@ -129,6 +144,28 @@ def index_html():
     return page(f"{BOOK} — практические занятия", body)
 
 
+def check_html():
+    rows = ""
+    for L in LESSONS:
+        for kind, (vid, t) in (("основное", L["video"]), ("доп.", L["extra"])):
+            rows += (f'<div class="row"><img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" data-vid="{vid}">'
+                     f'<div><b>Занятие {L["n"]}</b> · {kind}<br><a href="{yt(vid)}">{html.escape(t)}</a><br>'
+                     f'<span class="st">проверяю…</span></div></div>')
+    body = f"""<h1>Проверка видео</h1>
+<p class="goal">Страница для автора: показывает, доступны ли видео на YouTube. <span id="sum"></span></p>
+<section class="card">{rows}</section>
+<script>
+var n=0,badN=0,imgs=document.querySelectorAll('.row img');
+function done(img,ok){{var s=img.parentNode.querySelector('.st');s.textContent=ok?'✓ доступно':'✗ недоступно (удалено или закрыто)';s.className='st '+(ok?'ok':'bad');n++;if(!ok)badN++;
+if(n==imgs.length)document.getElementById('sum').textContent='Итог: недоступно '+badN+' из '+n+'.';}}
+imgs.forEach(function(img){{
+ function f(){{done(img,img.naturalWidth>120)}}
+ if(img.complete&&img.naturalWidth)f();else{{img.addEventListener('load',f);img.addEventListener('error',function(){{done(img,false)}});}}
+}});
+</script>"""
+    return page("Проверка видео", body)
+
+
 def write(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -151,6 +188,7 @@ def main():
         write(os.path.join(HERE, str(L["n"]), "index.html"), lesson_html(L, prev, nxt))
         qr(f"{BASE_URL}{L['n']}/", f"pz-{L['n']:02d}")
     write(os.path.join(HERE, "index.html"), index_html())
+    write(os.path.join(HERE, "check.html"), check_html())
     qr(BASE_URL, "pz-all")
     print(f"OK: {len(LESSONS)} страниц, QR в {os.path.join(HERE, 'qr')}")
 
