@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 8. Планирование и оптимизация транспортных маршрутов</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 8</span>
+<h1>Планирование и оптимизация транспортных маршрутов</h1>
+<p class="goal"><b>Цель:</b> Освоить построение маршрутов развозки методом Кларка — Райта и оценку эффекта оптимизации. <b>Теория:</b> § 11 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_lBF2uruIh0" title="Алгоритм Кларка — Райта: задача маршрутизации (на испанском, включите автоперевод субтитров)" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=_lBF2uruIh0">Алгоритм Кларка — Райта: задача маршрутизации (на испанском, включите автоперевод субтитров)</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=p0Nhaj5cyys">Транспортная задача по шагам за 15 минут</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">Начинаем с худшего варианта — отдельная машина к каждому клиенту и обратно. Экономия от объединения
+клиентов i и j в один рейс: s<sub>ij</sub> = d<sub>0i</sub> + d<sub>0j</sub> − d<sub>ij</sub>. Объединяем пары
+в порядке убывания экономии, пока не мешает грузоподъёмность.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>Расстояния от склада:</b> d₀₁ ≈ 22,4; d₀₂ ≈ 29,2; d₀₃ ≈ 30,4; d₀₄ = 25,0; d₀₅ ≈ 22,4 км.</li><li><b>Исходный пробег</b> (туда и обратно к каждому): 2 × 129,3 ≈ <b>258,6 км</b>.</li><li><b>Экономии по убыванию:</b> 2–3: 39,0; 1–2: 35,7; 1–4: 22,4; 1–3: 20,8 км …</li><li><b>2–3:</b> груз 4 + 2 = 6 т ≤ 8 → объединяем: маршрут 0–2–3–0.</li><li><b>1–2:</b> клиент 2 уже в маршруте с 3, груз был бы 3 + 6 = 9 т > 8 → <b>отказ</b> (поэтому пара с большой экономией не вошла в решение).</li><li><b>1–4:</b> 3 + 3 = 6 т → объединяем: 0–1–4–0. Дальнейшие объединения превышают 8 т; клиент 5 остаётся отдельно.</li><li><b>Итог:</b> 0–1–4–0 (6 т, 72,4 км) + 0–2–3–0 (6 т, 80,2 км) + 0–5–0 (4 т, 44,7 км) = <b>197,3 км</b>, экономия ≈ <b>24 %</b>.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">Расстояние: <code>=КОРЕНЬ((x1-x2)^2+(y1-y2)^2)</code>. Экономии — в отдельной матрице, затем выпишите пары в список и отсортируйте по убыванию.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Забыть проверку грузоподъёмности при каждом объединении.</li><li>Вставлять клиента в середину маршрута: по методу присоединять можно только к концам маршрута.</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>В чём суть метода экономии Кларка — Райта?</li><li>Почему пара 1–2 с большой экономией не объединилась в итоговом решении?</li><li>Какие ограничения реальной маршрутизации не учтены в задаче?</li></ol></section>
+<div class="nav"><a href="../7/">← Занятие 7</a><a href="../">Все занятия</a><a href="../9/">Занятие 9 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

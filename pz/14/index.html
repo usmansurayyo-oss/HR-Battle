@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 14. Анализ практических кейсов по Green Logistics и Reverse Logistics</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 14</span>
+<h1>Анализ практических кейсов по Green Logistics и Reverse Logistics</h1>
+<p class="goal"><b>Цель:</b> Научиться рассчитывать углеродный след перевозок и экономику обратных потоков. <b>Теория:</b> § 19 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/U3CAsI49ChQ" title="Reverse Logistics Explained (англ., включите субтитры)" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=U3CAsI49ChQ">Reverse Logistics Explained (англ., включите субтитры)</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=8Lg32deksDY">What Defines Green Reverse Logistics? (англ.)</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">Выбросы CO₂ считаются от израсходованного топлива; удельные выбросы на т-км позволяют сравнивать
+перевозчиков. В обратной логистике лучший возврат — тот, которого не было; из оставшихся
+выгоднее всего повторная продажа, затем восстановление, затем переработка.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>Выбросы:</b> 60 000 л × 2,68 кг = 160 800 кг = <b>160,8 т CO₂</b>.</li><li><b>Удельные выбросы:</b> 160 800 000 г ÷ 2 000 000 т-км = <b>80,4 г/т-км</b>.</li><li><b>Меры:</b> оптимизация маршрутов (−5…10 %), лучшая загрузка машин (−5…15 %), обучение эко-вождению (−5…8 %), перевод части перевозок на железную дорогу.</li><li><b>Повторная продажа:</b> 70 % × 1 500 = 1 050 шт. × 270 тыс. (цена со скидкой 10 %) = <b>283,5 млн</b>.</li><li><b>Восстановление:</b> 300 шт. × (150 − 60) тыс. = <b>27 млн</b>. <b>Переработка:</b> 150 × 10 тыс. = <b>1,5 млн</b>.</li><li><b>Обработка возвратов:</b> 1 500 × 30 тыс. = <b>45 млн</b> (затраты).</li><li><b>Чистая восстановленная стоимость:</b> 283,5 + 27 + 1,5 − 45 = <b>267 млн</b>; коэффициент восстановления 267 ÷ 450 ≈ <b>59 %</b>.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">Вставка → Каскадная (водопадная) диаграмма: исходная стоимость 450, затем потери и затраты по каждому варианту.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Делить килограммы на т-км и получать ответ в неверных единицах.</li><li>Не вычитать затраты на обработку возвратов.</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>Как рассчитываются удельные выбросы на т-км?</li><li>Какие рычаги снижения выбросов совпадают с рычагами снижения затрат?</li><li>Почему предотвращение возвратов стоит на вершине иерархии?</li></ol></section>
+<div class="nav"><a href="../13/">← Занятие 13</a><a href="../">Все занятия</a><a href="../15/">Занятие 15 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

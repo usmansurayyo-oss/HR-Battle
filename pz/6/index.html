@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 6. Управление запасами на основе методов EOQ, ABC и XYZ</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 6</span>
+<h1>Управление запасами на основе методов EOQ, ABC и XYZ</h1>
+<p class="goal"><b>Цель:</b> Научиться рассчитывать оптимальный размер заказа, точку заказа и страховой запас, классифицировать ассортимент методами ABC и XYZ. <b>Теория:</b> § 9 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/BL8jdrLhAXg" title="ABC- и XYZ-анализ в MS Excel" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=BL8jdrLhAXg">ABC- и XYZ-анализ в MS Excel</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=kDU3kOZuJJw">EOQ Formula with examples in Excel (англ.)</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">EOQ — размер заказа, при котором сумма затрат на заказы и на хранение минимальна.
+Страховой запас защищает от колебаний спроса за время поставки. ABC делит ассортимент по вкладу
+в стоимость, XYZ — по стабильности спроса; вместе они подсказывают политику для каждой группы.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>EOQ</b> = √(2 × D × S ÷ H) = √(2 × 12 000 × 150 ÷ 20) ≈ <b>424 ед.</b>; заказов в год 12 000 ÷ 424 ≈ <b>28</b>.</li><li><b>Годовые затраты:</b> 28,3 × 150 + 424 ÷ 2 × 20 ≈ <b>8,49 млн сумов</b> (затраты на заказы равны затратам на хранение — признак оптимума).</li><li><b>Страховой запас</b> SS = z × σ<sub>d</sub> × √L = 1,65 × 12 × √5 ≈ <b>44 ед.</b></li><li><b>Точка заказа</b> ROP = d × L + SS = (12 000 ÷ 300) × 5 + 44 = <b>244 ед.</b></li><li><b>ABC:</b> сортируем по убыванию, накопленные доли: 42 %, 68 %, <b>81 %</b> (П1–П3 → A), 87,5 %, 91,7 %, <b>94,7 %</b> (П4–П6 → B), остальные — C.</li><li><b>XYZ</b> по коэффициенту вариации v = σ ÷ среднее: Т1 ≈ 5,4 % → <b>X</b>; Т2 ≈ 15,0 % → <b>Y</b>; Т3 ≈ 129 % → <b>Z</b>.</li><li><b>Политика:</b> AX — частые поставки, малый страховой запас, контроль постоянно; BY — периодический контроль, умеренный запас; CZ — под заказ или минимальный запас.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">EOQ: <code>=КОРЕНЬ(2*D*S/H)</code>; SS: <code>=1,65*12*КОРЕНЬ(5)</code>; вариация: <code>=СТАНДОТКЛОНП(B2:G2)/СРЗНАЧ(B2:G2)</code>. Для ABC: Данные → Сортировка по убыванию, затем накопленная сумма.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Брать дневное σ и годовой срок поставки (единицы времени должны совпадать).</li><li>Не отсортировать позиции перед ABC-анализом.</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>От каких затрат зависит оптимальный размер заказа?</li><li>Как уровень сервиса влияет на страховой запас?</li><li>Почему для позиций группы CZ не рекомендуется держать большой запас?</li></ol></section>
+<div class="nav"><a href="../5/">← Занятие 5</a><a href="../">Все занятия</a><a href="../7/">Занятие 7 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

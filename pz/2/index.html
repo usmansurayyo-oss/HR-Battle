@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 2. Картирование (Process Mapping) и моделирование логистических процессов</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 2</span>
+<h1>Картирование (Process Mapping) и моделирование логистических процессов</h1>
+<p class="goal"><b>Цель:</b> Освоить построение карты процесса в нотации BPMN и карты потока создания ценности (VSM), научиться находить потери и узкие места. <b>Теория:</b> § 5 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/J-80Cc8pl88" title="Основы BPMN для начинающих" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=J-80Cc8pl88">Основы BPMN для начинающих</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=KNjMPOMnuxA">Картирование потока создания ценности. Бережливое производство</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">BPMN показывает, <i>кто и в каком порядке</i> выполняет работу (дорожки отделов). VSM показывает,
+<i>сколько времени</i> уходит на работу, а сколько — на ожидание. Как правило, ожидания
+занимают большую часть времени цикла — их и надо сокращать в первую очередь.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>BPMN.</b> Три дорожки: «Продажи», «Склад», «Транспорт». Начальное событие — заказ получен, конечное — машина отгружена.</li><li><b>Тип этапа.</b> Операции: приём заказа 10, проверка 5, отбор 25, контроль и упаковка 15, погрузка 20 мин. Ожидания: волна отбора 120, контроль 40, погрузка 180 мин.</li><li><b>Время операций:</b> 10 + 5 + 25 + 15 + 20 = <b>75 мин</b>. <b>Время ожиданий:</b> 120 + 40 + 180 = <b>340 мин</b>.</li><li><b>Время цикла:</b> 75 + 340 = <b>415 мин</b> (6 ч 55 мин).</li><li><b>Эффективность процесса:</b> 75 ÷ 415 ≈ <b>18 %</b>. 82 % времени заказ просто ждёт.</li><li><b>Карта будущего состояния.</b> Например: чаще запускать волны отбора, совместить контроль с упаковкой, планировать погрузку по слотам — и пересчитать эффективность.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">Столбцы: этап, время, тип (операция/ожидание). Суммы: <code>=СУММЕСЛИ(C:C;"операция";B:B)</code> и то же для «ожидание». Доля: операции ÷ общее время.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Не выделять ожидания отдельными этапами — именно они дают основные потери.</li><li>Путать BPMN (логика и исполнители) с VSM (время и ценность).</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>Чем карта процесса BPMN отличается от карты потока создания ценности?</li><li>Какие виды потерь выделяет бережливое производство?</li><li>Как закон Литтла связывает запас незавершённых заказов и время цикла?</li></ol></section>
+<div class="nav"><a href="../1/">← Занятие 1</a><a href="../">Все занятия</a><a href="../3/">Занятие 3 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

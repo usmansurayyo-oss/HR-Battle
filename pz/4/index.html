@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 4. Анализ материальных, информационных и финансовых потоков</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 4</span>
+<h1>Анализ материальных, информационных и финансовых потоков</h1>
+<p class="goal"><b>Цель:</b> Научиться описывать три вида логистических потоков и рассчитывать финансовый цикл предприятия. <b>Теория:</b> § 7, § 17 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/pgI0C50BYHY" title="Оборачиваемость и финансовый цикл" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=pgI0C50BYHY">Оборачиваемость и финансовый цикл</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=L3tN3LKK5xc">Оборотные средства за 30 минут: состав, расчёт, примеры</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">Товар идёт от поставщика к клиенту, документы и данные — в обе стороны, деньги — навстречу товару.
+Финансовый цикл показывает, сколько дней деньги предприятия «заморожены» между оплатой поставщику
+и получением оплаты от клиента. Логистика сокращает его прежде всего через запасы.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>Схема потоков:</b> поставщик → предприятие → клиент; на стрелках — документы (заказ, счёт-фактура, накладная, платёж).</li><li><b>DIO</b> (дни запаса) = 8 ÷ 48 × 365 ≈ <b>60,8 дня</b> — запас делим на <i>себестоимость</i>.</li><li><b>DSO</b> (дни дебиторской задолженности) = 5 ÷ 60 × 365 ≈ <b>30,4 дня</b> — делим на <i>выручку</i>.</li><li><b>DPO</b> (дни кредиторской задолженности) = 4 ÷ 48 × 365 ≈ <b>30,4 дня</b> — делим на <i>себестоимость</i>.</li><li><b>Финансовый цикл</b> CCC = DIO + DSO − DPO = 60,8 + 30,4 − 30,4 ≈ <b>60,8 дня</b>.</li><li><b>Эффект сокращения запаса на 10 дней:</b> 48 ÷ 365 × 10 ≈ <b>1,3 млрд сумов</b> высвобожденного оборотного капитала.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0"><code>=запас/себестоимость*365</code>, <code>=дебиторская/выручка*365</code>, <code>=кредиторская/себестоимость*365</code>; CCC — сумма первых двух минус третья.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Делить запас на выручку вместо себестоимости.</li><li>Прибавлять DPO вместо того, чтобы вычитать: отсрочка поставщику сокращает цикл.</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>Как связаны материальный, информационный и финансовый потоки?</li><li>Что показывает финансовый цикл?</li><li>Какими логистическими мерами можно сократить финансовый цикл?</li></ol></section>
+<div class="nav"><a href="../3/">← Занятие 3</a><a href="../">Все занятия</a><a href="../5/">Занятие 5 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

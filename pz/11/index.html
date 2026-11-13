@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 11. Анализ и управление логистическими рисками</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 11</span>
+<h1>Анализ и управление логистическими рисками</h1>
+<p class="goal"><b>Цель:</b> Научиться идентифицировать, оценивать и ранжировать логистические риски и обосновывать меры их снижения. <b>Теория:</b> § 15 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/OGWoFsGir4Y" title="Управление рисками в цепях поставок" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=OGWoFsGir4Y">Управление рисками в цепях поставок</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=Xk3H1rDUpck">Шпаргалка: где искать логистические риски?</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">Ожидаемый ущерб = вероятность × ущерб — удобная мера для сравнения рисков и мер их снижения.
+Но редкие катастрофические риски (пожар) по ожидаемому ущербу недооцениваются: их нужно
+страховать и предотвращать независимо от расчёта.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>Ожидаемый ущерб:</b> R1 0,20 × 500 = <b>100</b>; R2 0,40 × 150 = <b>60</b>; R3 0,02 × 4 000 = <b>80</b>; R4 0,10 × 200 = <b>20</b>; R5 0,50 × 120 = <b>60</b> млн сумов.</li><li><b>Итого:</b> <b>320 млн сумов</b> в год.</li><li><b>Карта рисков:</b> переведите вероятность и ущерб в баллы 1–5 и разместите риски на поле «вероятность × последствия». Красная зона — критические.</li><li><b>Ранжирование:</b> R1 (100), R3 (80), R2 и R5 (по 60), R4 (20). R3 критичен из-за катастрофического ущерба.</li><li><b>Мера по R1 (второй поставщик):</b> ущерб снижается до 0,05 × 500 = 25 млн; эффект 100 − 25 = 75 млн минус затраты 40 млн = <b>+35 млн сумов в год</b> — мера целесообразна.</li><li><b>Меры по R2 и R3:</b> R2 — альтернативные погранпереходы, электронное декларирование, буферный запас; R3 — страхование имущества, пожарная сигнализация и спринклеры.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">Ожидаемый ущерб: <code>=B2*C2</code>. Карта рисков: Вставка → Пузырьковая (X — вероятность, Y — ущерб, размер — ожидаемый ущерб).</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Оценивать меру по снижению ущерба, забыв вычесть её стоимость.</li><li>Отбрасывать R3 как «маловероятный».</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>Как рассчитывается ожидаемый ущерб?</li><li>Почему редкие катастрофические риски нельзя оценивать только по ожидаемому ущербу?</li><li>Какие стратегии реагирования на риски существуют?</li></ol></section>
+<div class="nav"><a href="../10/">← Занятие 10</a><a href="../">Все занятия</a><a href="../12/">Занятие 12 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>

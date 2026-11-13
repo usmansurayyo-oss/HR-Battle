@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Занятие 13. Использование систем ERP, WMS и TMS в логистических процессах</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем · Приложение Б</p>
+<span class="num">Практическое занятие 13</span>
+<h1>Использование систем ERP, WMS и TMS в логистических процессах</h1>
+<p class="goal"><b>Цель:</b> Изучить функции логистических информационных систем и научиться оценивать экономический эффект их внедрения. <b>Теория:</b> § 17, § 18 пособия.</p>
+
+<section class="card">
+<h2>▶ Видео к занятию</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/LnQyPVRlwTE" title="Что такое WMS? Простыми словами, за 2 минуты" loading="lazy"
+ allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+<div class="vlinks">
+<p><a href="https://www.youtube.com/watch?v=LnQyPVRlwTE">Что такое WMS? Простыми словами, за 2 минуты</a> — открыть в YouTube</p>
+<p>Дополнительно: <a href="https://www.youtube.com/watch?v=AKfH6hALF2E">WMS and TMS in supply chain technology (англ.)</a></p>
+</div>
+</section>
+
+<section class="card idea"><h2>💡 Главная идея</h2><p style="margin:0">ERP планирует и ведёт учёт всей компании, WMS управляет операциями внутри склада, TMS — перевозками
+за его пределами. Эффект от WMS складывается из меньшего числа ошибок, экономии труда и
+снижения запасов; из него вычитают стоимость поддержки.</p></section>
+
+<section class="card"><h2>🧮 Разбор решения по шагам</h2><ol class="steps"><li><b>Функции.</b> WMS: адресное хранение, приёмка, отбор по волнам, инвентаризация. TMS: планирование рейсов, отслеживание, расчёт тарифов. В ERP передаются остатки, отгрузки, затраты.</li><li><b>EDI-сообщения:</b> заказ (ORDERS), подтверждение (ORDRSP), уведомление об отгрузке (DESADV), счёт (INVOIC), подтверждение приёмки (RECADV).</li><li><b>Экономия на ошибках:</b> было 800 000 × 0,4 % = 3 200, стало 800; (3 200 − 800) × 50 тыс. = <b>120 млн сумов</b>.</li><li><b>На персонале:</b> 2 000 ч × 40 тыс. = <b>80 млн</b>. <b>На запасах:</b> 4 000 × 0,08 × 0,25 = <b>80 млн</b>.</li><li><b>Чистый эффект:</b> 280 − 60 (поддержка) = <b>220 млн сумов</b> в год.</li><li><b>Срок окупаемости:</b> 700 ÷ 220 ≈ <b>3,2 года</b>.</li><li><b>Штрихкод или RFID:</b> для паллетного склада со средним потоком обычно достаточно штрихкода; RFID оправдан при высокой стоимости единиц и массовой инвентаризации.</li></ol></section>
+
+<section class="card"><h2>📊 Как сделать в Excel</h2><p style="margin:0">Таблица «статья — до — после — экономия», итог: <code>=СУММ()</code> экономии минус поддержка.</p></section>
+
+<section class="card warn"><h2>⚠️ Типичные ошибки</h2><ul><li>Считать экономию на запасах как всё сокращение запаса (320 млн), а не как сэкономленные затраты на его хранение.</li><li>Забыть вычесть ежегодную поддержку системы.</li></ul></section>
+
+<section class="card"><h2>❓ Контрольные вопросы</h2><ol><li>Какие задачи решают ERP, WMS и TMS?</li><li>Почему внедрению WMS должно предшествовать упорядочение процессов?</li><li>Как информационные системы влияют на страховые запасы?</li></ol></section>
+<div class="nav"><a href="../12/">← Занятие 12</a><a href="../">Все занятия</a><a href="../14/">Занятие 14 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.<br>
+Видео размещены на YouTube их авторами; ссылки даны в учебных целях.</footer>
+</main></body></html>
