@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>§ 2. Теория логистических систем и этапы развития логистики</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video{display:block}.video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:48px;border-radius:12px;background:#e00;color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center}.btn{display:inline-block;background:var(--accent);color:var(--card);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 14px}.vbad{color:var(--warn);margin:8px 0 0}.ok{color:var(--accent);font-weight:700}.bad{color:var(--warn);font-weight:700}.row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.row img{width:96px;height:54px;object-fit:cover;border-radius:6px;background:#000;flex:none}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+
+.term{border-bottom:1px solid var(--line);padding:8px 0}
+.term:last-child{border-bottom:0}
+.term summary{cursor:pointer;font-weight:600}
+.term p{margin:6px 0 0;color:var(--mute)}
+.term.plain{font-weight:600}
+.q{margin:0 0 16px}
+.q b{display:block;margin-bottom:6px}
+.q label{display:block;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer}
+.q label.right{border-color:var(--accent);background:var(--accent-soft)}
+.q label.wrong{border-color:var(--warn);background:var(--warn-soft)}
+button.btn{border:0;font:inherit;cursor:pointer}
+#score{font-weight:700;margin-top:10px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем</p>
+<span class="num">§ 2</span>
+<h1>Теория логистических систем и этапы развития логистики</h1>
+
+<section class="card idea"><h2>🎯 Что вы освоите</h2>
+<p style="margin:0 0 4px"><b>Узнаете:</b></p><ul><li>этапы развития логистики — от военного снабжения до цифровой экономики;</li><li>основные концепции логистического менеджмента (MRP, JIT, Lean, SCM);</li></ul>
+<p style="margin:8px 0 4px"><b>Поймёте:</b></p><ul><li>почему системный подход лежит в основе логистики;</li><li>как контейнеризация и глобализация изменили логистические системы;</li></ul>
+<p style="margin:8px 0 4px"><b>Приобретёте навыки:</b></p><ul><li>рассчитывать время в пути и потребность в транспортных средствах;</li><li>сравнивать маршруты и коридоры по времени и затратам.</li></ul>
+</section>
+
+<section class="card"><h2>📖 Интерактивный глоссарий</h2>
+<p class="goal" style="margin-bottom:8px">Нажмите на термин, чтобы увидеть определение.</p>
+<div class="term plain">Военная логистика</div><div class="term plain">Производственная логистика</div><div class="term plain">Коммерческая (распределительная) логистика</div><div class="term plain">Физическое распределение</div><div class="term plain">Интегрированная логистика</div><details class="term"><summary>Управление цепями поставок</summary><p>управление совокупностью организаций и процессов, через которые продукт проходит от добычи сырья до конечного потребителя, как единым целым: согласование стратегии, планирования, закупок, производства, распределения и отношений с партнёрами.</p></details><div class="term plain">Системный подход</div><div class="term plain">Концепция общих затрат</div><div class="term plain">Контейнеризация</div><details class="term"><summary>MRP</summary><p>метод планирования потребности в материалах на основе плана выпуска готовой продукции, спецификаций и данных о запасах.</p></details><div class="term plain">«точно в срок» (JIT)</div><div class="term plain">Бережливое производство (Lean)</div><div class="term plain">«тянущая» и «толкающая» системы</div><div class="term plain">Глобальная цепь поставок</div><details class="term"><summary>Цифровая логистика</summary><p>организация логистических процессов на основе информационных систем и технологий автоматической идентификации, при которой данные о заказах, грузах, ресурсах и событиях фиксируются в момент возникновения, передаются между участниками в электронном виде и используются для планирования и управления в реальном времени.</p></details><div class="term plain">Запас в пути</div>
+</section>
+
+<section class="card"><h2>✅ Проверьте себя</h2>
+<div class="q" data-a="1"><b>1. Исторически первой сферой применения логистики была:</b><label><input type="radio" name="q0" value="0"> а) банковская деятельность</label><label><input type="radio" name="q0" value="1"> б) военное дело</label><label><input type="radio" name="q0" value="2"> в) розничная торговля</label><label><input type="radio" name="q0" value="3"> г) информационные технологии</label></div><div class="q" data-a="2"><b>2. Концепция общих затрат в физическом распределении связана с работой:</b><label><input type="radio" name="q1" value="0"> а) Г. Форда</label><label><input type="radio" name="q1" value="1"> б) Ф. Тейлора</label><label><input type="radio" name="q1" value="2"> в) Х. Льюиса и соавторов (1956)</label><label><input type="radio" name="q1" value="3"> г) А. Вебера (1909)</label></div><div class="q" data-a="2"><b>3. Общую теорию систем разработал:</b><label><input type="radio" name="q2" value="0"> а) Т. Оно</label><label><input type="radio" name="q2" value="1"> б) М. Портер</label><label><input type="radio" name="q2" value="2"> в) Л. фон Берталанфи</label><label><input type="radio" name="q2" value="3"> г) Дж. Орлицки</label></div><div class="q" data-a="0"><b>4. «Тянущая» система организации потоков предполагает, что:</b><label><input type="radio" name="q3" value="0"> а) движение материалов инициируется потребностью следующего звена</label><label><input type="radio" name="q3" value="1"> б) производство идёт по плану независимо от спроса</label><label><input type="radio" name="q3" value="2"> в) запасы максимальны на всех звеньях</label><label><input type="radio" name="q3" value="3"> г) заказы формирует только поставщик</label></div><div class="q" data-a="3"><b>5. Какой этап развития логистики соответствует управлению всей цепью от поставщика поставщика до клиента клиента?</b><label><input type="radio" name="q4" value="0"> а) производственная логистика</label><label><input type="radio" name="q4" value="1"> б) физическое распределение</label><label><input type="radio" name="q4" value="2"> в) военная логистика</label><label><input type="radio" name="q4" value="3"> г) управление цепями поставок</label></div>
+<button class="btn" id="check">Проверить</button>
+<button class="btn" id="reset" style="background:var(--line);color:var(--text);margin-left:6px">Сначала</button>
+<p id="score"></p>
+</section>
+
+<section class="card"><h2>▶ Видео и практика</h2>
+<a class="video" href="https://www.youtube.com/watch?v=QWsP8r5lyPQ" data-vid="QWsP8r5lyPQ">
+<img src="https://i.ytimg.com/vi/QWsP8r5lyPQ/hqdefault.jpg" alt="" loading="lazy"><span class="play">▶</span></a>
+<p class="vbad" hidden>Это видео сейчас недоступно на YouTube.</p>
+<div class="vlinks"><p>Практическое занятие 1: <a href="../../pz/1/">Анализ состава и элементов логистической системы</a> — видео и пошаговый разбор решения.</p></div>
+</section>
+<div class="nav"><a href="../1/">← § 1</a><a href="../">Все параграфы</a><a href="../3/">§ 3 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.</footer>
+</main>
+<script>
+document.getElementById('check').addEventListener('click', function () {
+  var qs = document.querySelectorAll('.q'), ok = 0, answered = 0;
+  qs.forEach(function (q) {
+    var right = +q.dataset.a, picked = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(function (l, i) {
+      l.classList.remove('right', 'wrong');
+      if (i === right) l.classList.add('right');
+    });
+    if (picked) {
+      answered++;
+      var v = +picked.value;
+      if (v === right) ok++; else picked.parentNode.classList.add('wrong');
+    }
+  });
+  var s = document.getElementById('score');
+  s.textContent = 'Результат: ' + ok + ' из ' + qs.length +
+    (answered < qs.length ? ' (отвечено ' + answered + ')' : '') +
+    (ok === qs.length ? ' — отлично!' : ok >= 3 ? ' — хорошо, повторите ошибки.' : ' — перечитайте параграф.');
+});
+document.getElementById('reset').addEventListener('click', function () {
+  document.querySelectorAll('.q input').forEach(function (i) { i.checked = false; });
+  document.querySelectorAll('.q label').forEach(function (l) { l.classList.remove('right', 'wrong'); });
+  document.getElementById('score').textContent = '';
+});
+</script><script>
+// Удалённые или закрытые видео отдают заглушку 120×90 или ошибку загрузки
+document.querySelectorAll('.video img').forEach(function (img) {
+  function warn() { var b = img.closest('.card').querySelector('.vbad'); if (b) b.hidden = false; }
+  function chk() { if (img.naturalWidth <= 120) warn(); }
+  img.addEventListener('load', chk);
+  img.addEventListener('error', warn);
+  if (img.complete && img.naturalWidth) chk();
+});
+</script>
+</body></html>

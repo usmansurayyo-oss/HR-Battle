@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>§ 14. Управление логистическими затратами и оценка экономической эффективности</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b2230;--mute:#5b6576;--line:#e2e6ec;--accent:#0b7a5c;--accent-soft:#e3f4ee;--warn:#9a4b00;--warn-soft:#fff3e3;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}}
+:root[data-theme="dark"]{--bg:#11161f;--card:#19202c;--text:#e8edf5;--mute:#9aa6b8;--line:#2a3443;--accent:#5fd3ad;--accent-soft:#16332b;--warn:#ffb866;--warn-soft:#33260f;--code:#232c3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+.book{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+h1{font-size:1.55rem;line-height:1.25;margin:4px 0 10px}
+h2{font-size:1.15rem;margin:0 0 10px}
+.num{display:inline-block;background:var(--accent);color:var(--card);border-radius:8px;padding:2px 10px;font-weight:700;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.goal{color:var(--mute);margin:0}
+.video{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+.video{display:block}.video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:48px;border-radius:12px;background:#e00;color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center}.btn{display:inline-block;background:var(--accent);color:var(--card);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 14px}.vbad{color:var(--warn);margin:8px 0 0}.ok{color:var(--accent);font-weight:700}.bad{color:var(--warn);font-weight:700}.row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.row img{width:96px;height:54px;object-fit:cover;border-radius:6px;background:#000;flex:none}
+.vlinks{margin:10px 0 0;font-size:15px}
+.vlinks p{margin:6px 0}
+.idea{background:var(--accent-soft);border-color:transparent}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.warn{background:var(--warn-soft);border-color:transparent}
+.warn h2{color:var(--warn)}
+code{background:var(--code);border-radius:5px;padding:1px 5px;font-size:.92em;word-break:break-word}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.list a{display:block;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.list a:last-child{border-bottom:0}
+.list b{color:var(--accent);margin-right:8px}
+footer{color:var(--mute);font-size:13px;margin-top:26px}
+
+.term{border-bottom:1px solid var(--line);padding:8px 0}
+.term:last-child{border-bottom:0}
+.term summary{cursor:pointer;font-weight:600}
+.term p{margin:6px 0 0;color:var(--mute)}
+.term.plain{font-weight:600}
+.q{margin:0 0 16px}
+.q b{display:block;margin-bottom:6px}
+.q label{display:block;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer}
+.q label.right{border-color:var(--accent);background:var(--accent-soft)}
+.q label.wrong{border-color:var(--warn);background:var(--warn-soft)}
+button.btn{border:0;font:inherit;cursor:pointer}
+#score{font-weight:700;margin-top:10px}
+</style></head>
+<body><main>
+
+<p class="book">Анализ и проектирование логистических систем</p>
+<span class="num">§ 14</span>
+<h1>Управление логистическими затратами и оценка экономической эффективности</h1>
+
+<section class="card idea"><h2>🎯 Что вы освоите</h2>
+<p style="margin:0 0 4px"><b>Узнаете:</b></p><ul><li>состав логистических затрат и методы их анализа (в том числе ABC costing);</li><li>показатели эффективности и методы оценки проектов (NPV, IRR, срок окупаемости);</li></ul>
+<p style="margin:8px 0 4px"><b>Поймёте:</b></p><ul><li>как стоимость денег влияет на логистические решения;</li><li>какие стратегии позволяют снизить логистические затраты;</li></ul>
+<p style="margin:8px 0 4px"><b>Приобретёте навыки:</b></p><ul><li>рассчитывать затраты на обслуживание клиента;</li><li>оценивать экономическую эффективность логистического проекта.</li></ul>
+</section>
+
+<section class="card"><h2>📖 Интерактивный глоссарий</h2>
+<p class="goal" style="margin-bottom:8px">Нажмите на термин, чтобы увидеть определение.</p>
+<details class="term"><summary>Логистические затраты</summary><p>затраты на выполнение логистических операций и функций — транспортировку, складирование, содержание запасов, обработку заказов, упаковку, информационное обеспечение и управление, — а также потери, связанные с дефицитом и несвоевременным выполнением заказов.</p></details><div class="term plain">Транспортные, складские затраты, затраты на содержание запасов и управление заказами</div><div class="term plain">Постоянные и переменные затраты</div><div class="term plain">Анализ общих затрат</div><details class="term"><summary>Функционально-стоимостной анализ (ABC-костинг)</summary><p>метод распределения косвенных затрат на продукты, заказы и клиентов пропорционально потреблённым видам деятельности.</p></details><div class="term plain">Драйвер затрат</div><details class="term"><summary>Затраты на обслуживание клиента (cost-to-serve)</summary><p>сумма логистических затрат, связанных с выполнением заказов конкретного клиента или канала сбыта.</p></details><details class="term"><summary>Уровень сервиса</summary><p>вероятность отсутствия дефицита в цикле пополнения запаса или доля спроса, удовлетворённого из наличия.</p></details><details class="term"><summary>Чистая приведённая стоимость (NPV)</summary><p>сумма дисконтированных денежных потоков проекта за вычетом инвестиций.</p></details><details class="term"><summary>Внутренняя норма доходности (IRR)</summary><p>ставка дисконтирования, при которой чистая приведённая стоимость проекта равна нулю.</p></details><details class="term"><summary>Срок окупаемости</summary><p>период, за который денежные потоки проекта возмещают инвестиции.</p></details><div class="term plain">Ставка дисконтирования</div>
+</section>
+
+<section class="card"><h2>✅ Проверьте себя</h2>
+<div class="q" data-a="2"><b>1. Функционально-стоимостной анализ (ABC costing) распределяет затраты:</b><label><input type="radio" name="q0" value="0"> а) пропорционально выручке</label><label><input type="radio" name="q0" value="1"> б) поровну между клиентами</label><label><input type="radio" name="q0" value="2"> в) пропорционально потреблённым видам деятельности</label><label><input type="radio" name="q0" value="3"> г) пропорционально весу груза</label></div><div class="q" data-a="1"><b>2. NPV — это:</b><label><input type="radio" name="q1" value="0"> а) срок окупаемости</label><label><input type="radio" name="q1" value="1"> б) сумма дисконтированных денежных потоков за вычетом инвестиций</label><label><input type="radio" name="q1" value="2"> в) сумма недисконтированных потоков</label><label><input type="radio" name="q1" value="3"> г) ставка дисконтирования</label></div><div class="q" data-a="1"><b>3. Проект эффективен, если:</b><label><input type="radio" name="q2" value="0"> а) срок окупаемости больше срока проекта</label><label><input type="radio" name="q2" value="1"> б) NPV &gt; 0 и IRR выше стоимости капитала</label><label><input type="radio" name="q2" value="2"> в) NPV &lt; 0</label><label><input type="radio" name="q2" value="3"> г) IRR = 0</label></div><div class="q" data-a="0"><b>4. Затраты на обслуживание клиента (cost-to-serve) позволяют:</b><label><input type="radio" name="q3" value="0"> а) выявить клиентов, обслуживание которых убыточно</label><label><input type="radio" name="q3" value="1"> б) выбрать вид упаковки</label><label><input type="radio" name="q3" value="2"> в) прогнозировать спрос</label><label><input type="radio" name="q3" value="3"> г) рассчитать налог</label></div><div class="q" data-a="2"><b>5. Затраты на аренду склада по отношению к объёму операций обычно являются:</b><label><input type="radio" name="q4" value="0"> а) переменными</label><label><input type="radio" name="q4" value="1"> б) нулевыми</label><label><input type="radio" name="q4" value="2"> в) постоянными</label><label><input type="radio" name="q4" value="3"> г) случайными</label></div>
+<button class="btn" id="check">Проверить</button>
+<button class="btn" id="reset" style="background:var(--line);color:var(--text);margin-left:6px">Сначала</button>
+<p id="score"></p>
+</section>
+
+<section class="card"><h2>▶ Видео и практика</h2>
+<a class="video" href="https://www.youtube.com/watch?v=7gktdiypw2U" data-vid="7gktdiypw2U">
+<img src="https://i.ytimg.com/vi/7gktdiypw2U/hqdefault.jpg" alt="" loading="lazy"><span class="play">▶</span></a>
+<p class="vbad" hidden>Это видео сейчас недоступно на YouTube.</p>
+<div class="vlinks"><p>Практическое занятие 10: <a href="../../pz/10/">Расчёт логистических затрат и оценка экономической эффективности</a> — видео и пошаговый разбор решения.</p></div>
+</section>
+<div class="nav"><a href="../13/">← § 13</a><a href="../">Все параграфы</a><a href="../15/">§ 15 →</a></div>
+
+<footer>Усманходжаева С. М. «Анализ и проектирование логистических систем». Учебное пособие. Ташкент, 2026.</footer>
+</main>
+<script>
+document.getElementById('check').addEventListener('click', function () {
+  var qs = document.querySelectorAll('.q'), ok = 0, answered = 0;
+  qs.forEach(function (q) {
+    var right = +q.dataset.a, picked = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(function (l, i) {
+      l.classList.remove('right', 'wrong');
+      if (i === right) l.classList.add('right');
+    });
+    if (picked) {
+      answered++;
+      var v = +picked.value;
+      if (v === right) ok++; else picked.parentNode.classList.add('wrong');
+    }
+  });
+  var s = document.getElementById('score');
+  s.textContent = 'Результат: ' + ok + ' из ' + qs.length +
+    (answered < qs.length ? ' (отвечено ' + answered + ')' : '') +
+    (ok === qs.length ? ' — отлично!' : ok >= 3 ? ' — хорошо, повторите ошибки.' : ' — перечитайте параграф.');
+});
+document.getElementById('reset').addEventListener('click', function () {
+  document.querySelectorAll('.q input').forEach(function (i) { i.checked = false; });
+  document.querySelectorAll('.q label').forEach(function (l) { l.classList.remove('right', 'wrong'); });
+  document.getElementById('score').textContent = '';
+});
+</script><script>
+// Удалённые или закрытые видео отдают заглушку 120×90 или ошибку загрузки
+document.querySelectorAll('.video img').forEach(function (img) {
+  function warn() { var b = img.closest('.card').querySelector('.vbad'); if (b) b.hidden = false; }
+  function chk() { if (img.naturalWidth <= 120) warn(); }
+  img.addEventListener('load', chk);
+  img.addEventListener('error', warn);
+  if (img.complete && img.naturalWidth) chk();
+});
+</script>
+</body></html>
