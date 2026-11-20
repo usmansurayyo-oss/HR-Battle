@@ -21,6 +21,38 @@
    "себестоимость тонно-километра",
    "совокупные логистические затраты"
   ],
+  "articles": [
+   {
+    "t": "Voxidova M. X. Xalqaro logistika: o‘quv qo‘llanma. — Toshkent: TDSHU nashriyoti, 2025. — 160 b.",
+    "u": "https://aps.tsuos.uz/storage/users/175/books/eIm0ztmO11H4mnRoebGvmgiFMcci1teDxZADswQd.pdf"
+   },
+   {
+    "t": "Неруш Ю. М., Неруш А. Ю. Логистика: учебник для вузов. — 6-е изд., перераб. и доп. — Москва: Юрайт, 2026. — 419 с. — ISBN 978-5-534-19105-9.",
+    "u": "https://urait.ru/bcode/583161"
+   },
+   {
+    "t": "Council of Supply Chain Management Professionals (CSCMP). Supply Chain Management Definitions and Glossary.",
+    "u": "https://cscmp.org/CSCMP/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx"
+   },
+   {
+    "t": "Arvis J.-F., Ojala L., Shepherd B. et al. Connecting to Compete 2023: Trade Logistics in an Uncertain Global Economy. The Logistics Performance Index and Its Indicators. — Washington, DC: World Bank, 2023.",
+    "u": "https://lpi.worldbank.org/international/global"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Почему грузооборот точнее характеризует транспортную работу, чем объём перевезённых грузов?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "В чём состоит концепция общих затрат и почему число складов в сети имеет оптимум?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Предложите схему логистической системы небольшого интернет-магазина в Ташкенте с указанием трёх потоков."
+   }
+  ],
   "outcomes": {
    "know": [
     "предмет, цель и задачи дисциплины, понятие логистики и правило «7R»;",
@@ -155,6 +187,26 @@
      "тоннах"
     ],
     "a": 0
+   },
+   {
+    "q": "Перевезено 400 т на 18 км и 250 т на 95 км. Грузооборот составляет:",
+    "opts": [
+     "23 750 т·км",
+     "113 т·км",
+     "650 т·км",
+     "30 950 т·км"
+    ],
+    "a": 3
+   },
+   {
+    "q": "Выручка — 60 млрд сумов, логистические затраты — 5,4 млрд, из них транспорт — 2,4 млрд. Какой вывод верен?",
+    "opts": [
+     "доля логистических затрат — 5,4 %, главный резерв — склад",
+     "доля логистических затрат — 9 %, главный резерв — управление",
+     "доля логистических затрат — 44 %, главный резерв — запасы",
+     "доля логистических затрат — 9 %, главный резерв — транспорт (около 44 % затрат)"
+    ],
+    "a": 3
    }
   ],
   "pz": 1
@@ -179,6 +231,38 @@
    "глобальная цепь поставок",
    "цифровая логистика",
    "запас в пути"
+  ],
+  "articles": [
+   {
+    "t": "Jomini A.-H. Précis de l’art de la guerre. — Paris: Anselin, 1838.",
+    "u": "https://onlinebooks.library.upenn.edu/webbin/who/Jomini%2c%20Antoine%20Henri%2c%20baron%20de%2c%201779%2d1869"
+   },
+   {
+    "t": "The National WWII Museum. “Keep ’em Rolling”: 82 Days on the Red Ball Express.",
+    "u": "https://www.nationalww2museum.org/war/articles/red-ball-express"
+   },
+   {
+    "t": "Bertalanffy L. von. General System Theory: Foundations, Development, Applications. — New York: George Braziller, 1968.",
+    "u": "https://search.worldcat.org/oclc/4442775"
+   },
+   {
+    "t": "Lewis H. T., Culliton J. W., Steele J. D. The Role of Air Freight in Physical Distribution. — Boston: Harvard University, Graduate School of Business Administration, 1956.",
+    "u": "https://libcat.library.tamu.edu/Record/in00000454043"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Почему при выборе маршрута нужно учитывать затраты на запас в пути?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Как расположить концепции MRP, JIT, ECR, Agile и Leagile по способу управления потоком и главному критерию?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте маршрут доставки контейнера из Китая в Ташкент с учётом времени, стоимости и затрат на запас в пути."
+   }
   ],
   "outcomes": {
    "know": [
@@ -310,6 +394,26 @@
      "управление цепями поставок"
     ],
     "a": 3
+   },
+   {
+    "q": "Расстояние — 3 000 км, скорость доставки по железной дороге — 600 км в сутки, ещё 4 суток уходит на перевалку и границу. Время в пути составит:",
+    "opts": [
+     "12 суток",
+     "4 суток",
+     "9 суток",
+     "5 суток"
+    ],
+    "a": 2
+   },
+   {
+    "q": "Почему маршрут с более низким тарифом может оказаться дороже для импортёра?",
+    "opts": [
+     "более долгая доставка увеличивает затраты на запас в пути и страховой запас",
+     "низкий тариф всегда означает меньшее расстояние",
+     "тариф не влияет на полную стоимость доставки",
+     "запас в пути не требует затрат"
+    ],
+    "a": 0
    }
   ],
   "pz": 1
@@ -332,6 +436,38 @@
    "надёжность логистической системы",
    "время цикла заказа",
    "точка безубыточности «сделать или купить»"
+  ],
+  "articles": [
+   {
+    "t": "Voxidova M. X. Xalqaro logistika: o‘quv qo‘llanma. — Toshkent: TDSHU nashriyoti, 2025. — 160 b.",
+    "u": "https://aps.tsuos.uz/storage/users/175/books/eIm0ztmO11H4mnRoebGvmgiFMcci1teDxZADswQd.pdf"
+   },
+   {
+    "t": "Неруш Ю. М., Неруш А. Ю. Логистика: учебник для вузов. — 6-е изд., перераб. и доп. — Москва: Юрайт, 2026. — 419 с. — ISBN 978-5-534-19105-9.",
+    "u": "https://urait.ru/bcode/583161"
+   },
+   {
+    "t": "NTT DATA, Penske Logistics, Penn State University. 30th Annual Third-Party Logistics Study, 2026; обзор: Shippers say 3PL ties are strategic, but data tells another story // Supply Chain 24/7.",
+    "u": "https://www.supplychain247.com/article/shippers-say-3pl-ties-are-strategic-but-data-tells-another-story"
+   },
+   {
+    "t": "Armstrong & Associates. Divergence: Armstrong’s Latest Third-Party Logistics Market Results and Predictions for 2024.",
+    "u": "https://www.3plogistics.com/divergence-armstrongs-latest-third-party-logistics-market-results-and-predictions-for-2024/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Почему надёжность цепи снижается с ростом числа звеньев? Как это рассчитать?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "За счёт каких элементов структуры Inditex обеспечивает доставку в магазины за 48 часов?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Спроектируйте структуру логистической системы регионального производителя продуктов питания и укажите, какие функции передать 3PL-оператору."
+   }
   ],
   "outcomes": {
    "know": [
@@ -455,6 +591,26 @@
      "отдел бухгалтерии"
     ],
     "a": 2
+   },
+   {
+    "q": "Цепь состоит из четырёх последовательных звеньев с надёжностью 0,95 каждое. Надёжность всей цепи примерно равна:",
+    "opts": [
+     "0,81",
+     "0,95",
+     "3,80",
+     "0,99"
+    ],
+    "a": 0
+   },
+   {
+    "q": "Собственный склад: постоянные затраты — 600 млн сумов в год, переменные — 20 тыс. сумов за паллету; услуги 3PL — 50 тыс. сумов за паллету. Что выгоднее при объёме 15 000 паллет в год?",
+    "opts": [
+     "оба варианта стоят одинаково",
+     "собственный склад, так как переменные затраты ниже",
+     "услуги 3PL, так как объём ниже точки безубыточности (20 000 паллет)",
+     "собственный склад, так как постоянные затраты не зависят от объёма"
+    ],
+    "a": 2
    }
   ],
   "pz": 1
@@ -478,6 +634,38 @@
    "S&OP",
    "откладывание (postponement)",
    "индекс давления на цепи поставок"
+  ],
+  "articles": [
+   {
+    "t": "Christopher M. Logistics and Supply Chain Management. — 6th ed. — London: Pearson, 2022. — 328 p.",
+    "u": "https://www.pearson.com/store/p/logistics-and-supply-chain-management/P200000007134/9781292416182"
+   },
+   {
+    "t": "Council of Supply Chain Management Professionals (CSCMP). Supply Chain Management Definitions and Glossary.",
+    "u": "https://cscmp.org/CSCMP/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx"
+   },
+   {
+    "t": "ASCM. SCOR Digital Standard (Supply Chain Operations Reference).",
+    "u": "https://www.ascm.org/corporate-solutions/standards-tools/scor-ds/"
+   },
+   {
+    "t": "Lee H. L., Padmanabhan V., Whang S. The Bullwhip Effect in Supply Chains // Sloan Management Review. — 1997. — Vol. 38, no. 3. — P. 93–102.",
+    "u": "https://sloanreview.mit.edu/article/the-bullwhip-effect-in-supply-chains/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитать коэффициент эффекта хлыста и почему он растёт вверх по цепи?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему обмен данными о продажах снижает эффект хлыста сильнее, чем улучшение прогноза одного звена?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Предложите план мер по снижению эффекта хлыста в цепи «производитель — дистрибьютор — магазин»."
+   }
   ],
   "outcomes": {
    "know": [
@@ -605,6 +793,26 @@
      "увеличение сроков поставки"
     ],
     "a": 2
+   },
+   {
+    "q": "Дисперсия спроса покупателей — 100, дисперсия заказов дистрибьютора — 400. Коэффициент эффекта хлыста равен:",
+    "opts": [
+     "0,25",
+     "4",
+     "2",
+     "300"
+    ],
+    "a": 1
+   },
+   {
+    "q": "Какая мера сильнее всего снижает эффект хлыста в цепи поставок?",
+    "opts": [
+     "частые ценовые акции",
+     "рационирование поставок при дефиците",
+     "обмен данными о продажах (POS) между всеми звеньями цепи",
+     "увеличение размера партий заказа"
+    ],
+    "a": 2
    }
   ],
   "pz": 1
@@ -631,6 +839,38 @@
    "закон Литтла",
    "узкое место",
    "коэффициент загрузки"
+  ],
+  "articles": [
+   {
+    "t": "ISO/IEC 19510:2013. Information technology — Object Management Group Business Process Model and Notation. — Geneva: ISO, 2013.",
+    "u": "https://www.iso.org/standard/62652.html"
+   },
+   {
+    "t": "Womack J. P., Jones D. T. Lean Thinking: Banish Waste and Create Wealth in Your Corporation. — New York: Simon & Schuster, 1996.",
+    "u": "https://www.simonandschuster.com/books/Lean-Thinking/James-P-Womack/9780743249270"
+   },
+   {
+    "t": "de Jesus Pacheco D. A., Møller Clausen D., Bumann J. A multi-method approach for reducing operational wastes in distribution warehouses // International Journal of Production Economics. — 2023. — Vol. 256. — Art. 108705.",
+    "u": "https://doi.org/10.1016/j.ijpe.2022.108705"
+   },
+   {
+    "t": "Rother M., Shook J. Learning to See: Value Stream Mapping to Add Value and Eliminate Muda. — Brookline, MA: Lean Enterprise Institute, 1999.",
+    "u": "https://www.lean.org/store/book/learning-to-see/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Сформулируйте закон Литтла и покажите, как он применяется на складе."
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Как найти узкое место процесса и что произойдёт после его расширения?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Постройте карту будущего состояния процесса выполнения заказа, сократив время ожиданий вдвое."
+   }
   ],
   "outcomes": {
    "know": [
@@ -770,6 +1010,26 @@
      "описывает только финансовые потоки"
     ],
     "a": 2
+   },
+   {
+    "q": "В процессе одновременно находится в среднем 120 заказов, обрабатывается 40 заказов в час. По закону Литтла среднее время цикла равно:",
+    "opts": [
+     "3 ч",
+     "0,33 ч",
+     "4 800 ч",
+     "160 ч"
+    ],
+    "a": 0
+   },
+   {
+    "q": "Время операций процесса — 75 мин, время ожиданий — 340 мин. Какой вывод следует из анализа?",
+    "opts": [
+     "процесс эффективен, изменения не нужны",
+     "около 82 % времени — ожидания, поэтому сокращать нужно прежде всего их",
+     "главный резерв — ускорение операций",
+     "нужно увеличить число операций"
+    ],
+    "a": 1
    }
   ],
   "pz": 2
@@ -791,6 +1051,38 @@
    "время такта",
    "дни запаса",
    "время потока"
+  ],
+  "articles": [
+   {
+    "t": "World Trade Organization. Uzbekistan’s accession: 13th meeting of the Working Party. — 27–28.07.2026.",
+    "u": "https://www.wto.org/english/news_e/news26_e/acc_27jul26_470_e.htm"
+   },
+   {
+    "t": "Национальный комитет Республики Узбекистан по статистике. Социально-экономическое положение Республики Узбекистан, январь — декабрь 2025 года.",
+    "u": "https://stat.uz/img/news/talil-2025-jil-yanvar-dekabr-ruscha-_p80763.pdf"
+   },
+   {
+    "t": "Дефицит складов класса «А» в Узбекистане: оценки Всемирного банка // Spot.uz. — 17.07.2026.",
+    "u": "https://www.spot.uz/ru/2026/07/17/real-estate/"
+   },
+   {
+    "t": "Правительственный портал Республики Узбекистан. Рассмотрены предложения по развитию транспортно-логистической системы. — 01.07.2026.",
+    "u": "https://gov.uz/ru/news/view/186278"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как построить матрицу TOWS и какие типы стратегий она даёт?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему разрыв по показателям, близким к 100 %, правильнее оценивать по доле ошибок?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте программу бенчмаркинга для логистического отдела предприятия: показатели, эталоны, источники данных."
+   }
   ],
   "outcomes": {
    "know": [
@@ -910,6 +1202,26 @@
      "финансовым"
     ],
     "a": 2
+   },
+   {
+    "q": "Внешний фактор с весом 0,3 оценён в 4 балла, фактор с весом 0,7 — в 2 балла. Взвешенная оценка равна:",
+    "opts": [
+     "2,6",
+     "3,0",
+     "1,4",
+     "6,0"
+    ],
+    "a": 0
+   },
+   {
+    "q": "OTIF компании — 96 %, у лидера отрасли — 99 %. Во сколько раз доля сбоев компании больше, чем у лидера?",
+    "opts": [
+     "разницы почти нет",
+     "в 4 раза",
+     "в 1,03 раза",
+     "в 3 раза"
+    ],
+    "a": 1
    }
   ],
   "pz": 3
@@ -930,6 +1242,38 @@
    "оборачиваемость запасов (DIO), дебиторской (DSO) и кредиторской (DPO) задолженности",
    "финансовый цикл (C2C)",
    "страховой запас"
+  ],
+  "articles": [
+   {
+    "t": "Министерство инвестиций, промышленности и торговли Республики Узбекистан. In 2025, Uzbekistan’s exports reached $33.4 billion. — 07.01.2026.",
+    "u": "https://gov.uz/en/miit/news/view/116854"
+   },
+   {
+    "t": "Налоговый комитет при Министерстве экономики и финансов Республики Узбекистан. Электронные счета-фактуры.",
+    "u": "https://soliq.uz"
+   },
+   {
+    "t": "Правительственный портал Республики Узбекистан. Рассмотрены предложения по развитию транспортно-логистической системы. — 01.07.2026.",
+    "u": "https://gov.uz/ru/news/view/186278"
+   },
+   {
+    "t": "The Hackett Group. 2025 Working Capital Survey: Payables Rebound but Receivables and Inventory Lag // Business Wire. — 18.08.2025.",
+    "u": "https://www.businesswire.com/news/home/20250818205819/en/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитать коэффициенты неравномерности и вариации потока? Что они показывают?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему неточная информация об остатках увеличивает страховой запас? Покажите на формуле."
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Составьте схему трёх потоков своего предприятия с документами и предложите способы их синхронизации."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1045,6 +1389,26 @@
      "VSM"
     ],
     "a": 2
+   },
+   {
+    "q": "Средний запас — 8 млрд сумов, себестоимость продаж — 48 млрд сумов в год. Запас в днях (DIO) составляет:",
+    "opts": [
+     "6 дней",
+     "около 166 дней",
+     "около 60,8 дня",
+     "около 48,7 дня"
+    ],
+    "a": 2
+   },
+   {
+    "q": "Как изменится финансовый цикл, если срок оплаты поставщику (DPO) увеличить на 10 дней при прочих равных?",
+    "opts": [
+     "увеличится на 10 дней",
+     "сократится на 20 дней",
+     "сократится на 10 дней",
+     "не изменится"
+    ],
+    "a": 2
    }
   ],
   "pz": 4
@@ -1072,6 +1436,38 @@
    "S&OP",
    "DRP",
    "планирование в условиях неопределённости"
+  ],
+  "articles": [
+   {
+    "t": "Hyndman R. J., Athanasopoulos G. Forecasting: Principles and Practice. — 3rd ed. — Melbourne: OTexts, 2021.",
+    "u": "https://otexts.com/fpp3/"
+   },
+   {
+    "t": "Makridakis S., Spiliotis E., Assimakopoulos V. M5 accuracy competition: Results, findings, and conclusions // International Journal of Forecasting. — 2022. — Vol. 38, no. 4. — P. 1346–1364.",
+    "u": "https://doi.org/10.1016/j.ijforecast.2021.11.013"
+   },
+   {
+    "t": "Makridakis Competitions // Wikipedia.",
+    "u": "https://en.wikipedia.org/wiki/Makridakis_Competitions"
+   },
+   {
+    "t": "Экспорт узбекских фруктов и овощей вырос почти на 37 % и превысил 1,9 миллиарда долларов // Dunyo.info. — 29.12.2025.",
+    "u": "https://dunyo.info/ru/Eksport/eksport-uzbekskih-fruktov-i-ovoshchey-vyros-pochti-na-37-i-prevysil-19"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитывается скользящее среднее и как выбор n влияет на прогноз?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему простые методы временных рядов отстают при наличии тренда?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте квартальный план S&OP для сезонного товара: прогноз, мощности, запасы."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1215,6 +1611,26 @@
      "складской инвентаризации"
     ],
     "a": 0
+   },
+   {
+    "q": "Продажи за три последних месяца — 445, 480 и 500 коробок. Прогноз скользящим средним по трём месяцам равен:",
+    "opts": [
+     "475 коробок",
+     "500 коробок",
+     "466 коробок",
+     "441 коробка"
+    ],
+    "a": 0
+   },
+   {
+    "q": "MAPE скользящего среднего — 6,4 %, экспоненциального сглаживания — 7,1 %. Какой метод выбрать для плана?",
+    "opts": [
+     "скользящее среднее, так как его средняя ошибка меньше",
+     "экспоненциальное сглаживание, так как оно сложнее",
+     "ни один, так как ошибки больше 5 %",
+     "любой — разница не имеет значения"
+    ],
+    "a": 0
    }
   ],
   "pz": 5
@@ -1238,6 +1654,38 @@
    "матрица ABC/XYZ",
    "«точно в срок» (JIT)",
    "отношение запасов к продажам"
+  ],
+  "articles": [
+   {
+    "t": "CSCMP, Kearney. 37th Annual State of Logistics Report. — 2026; обзор: Supply Chain Digest. State of Logistics 2026.",
+    "u": "https://www.scdigest.com/firstthoughts/26-06-26.php"
+   },
+   {
+    "t": "U.S. Census Bureau. Total Business: Inventories to Sales Ratio [ISRATIO] // Federal Reserve Bank of St. Louis, FRED.",
+    "u": "https://fred.stlouisfed.org/series/ISRATIO"
+   },
+   {
+    "t": "Silver E. A., Pyke D. F., Thomas D. J. Inventory and Production Management in Supply Chains. — 4th ed. — Boca Raton: CRC Press, 2017.",
+    "u": "https://www.routledge.com/Inventory-and-Production-Management-in-Supply-Chains/Silver-Pyke-Thomas/p/book/9781466558618"
+   },
+   {
+    "t": "Harris F. W. How Many Parts to Make at Once // Factory, The Magazine of Management. — 1913. — Vol. 10, no. 2. — P. 135–136.",
+    "u": "https://doi.org/10.1287/opre.38.6.947"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Выведите формулу EOQ из условия минимума годовых затрат. Какие допущения лежат в её основе?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Что показывает XYZ-анализ и как выбрать политику для группы AZ и для группы CX?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте политику управления запасами для ассортимента дистрибьютора по матрице ABC–XYZ."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1365,6 +1813,26 @@
      "увеличивается неопределённость спроса или срока поставки"
     ],
     "a": 3
+   },
+   {
+    "q": "Годовой спрос — 12 000 ед., затраты на заказ — 150 тыс. сумов, затраты на хранение — 20 тыс. сумов за единицу в год. Оптимальный размер заказа (EOQ) примерно равен:",
+    "opts": [
+     "600 ед.",
+     "424 ед.",
+     "180 000 ед.",
+     "300 ед."
+    ],
+    "a": 1
+   },
+   {
+    "q": "Позиция отнесена к группе CZ. Какая политика управления запасом рациональнее?",
+    "opts": [
+     "заказ по EOQ без учёта колебаний спроса",
+     "поставка под заказ и минимальный запас",
+     "большой страховой запас",
+     "ежедневный контроль и частые поставки"
+    ],
+    "a": 1
    }
   ],
   "pz": 6
@@ -1388,6 +1856,38 @@
    "коэффициент использования площади",
    "пропускная способность ворот",
    "производительность комплектации"
+  ],
+  "articles": [
+   {
+    "t": "Ассоциация банков России. Комитет по залогам и оценке. Классификация складских объектов: рекомендации. — М., 2019 (протокол от 13.12.2019).",
+    "u": "https://asros.ru/upload/iblock/ded/5853-Klassifikatsiya-skladov-2020_var100500.pdf"
+   },
+   {
+    "t": "Frazelle E. H. World-Class Warehousing and Material Handling. — 2nd ed. — New York: McGraw-Hill, 2016.",
+    "u": "https://search.worldcat.org/oclc/951429325"
+   },
+   {
+    "t": "Amazon’s Robot Fleet Hits 1-Million Milestone, Boosts Efficiency by 10% // eWeek. — 02.07.2025.",
+    "u": "https://www.eweek.com/news/amazon-robots-automation-jobs/"
+   },
+   {
+    "t": "WERC Releases 2025 DC Measures Report with a Focus on Combining Vision with Vigilance // Warehousing Education and Research Council. — 2025.",
+    "u": "https://werc.org/news/702949/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитать площадь зоны хранения и общую площадь склада?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Чем различаются позаказный, пакетный, зональный и волновой методы комплектации?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте схему зонирования склада интернет-магазина с указанием потоков."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1515,6 +2015,26 @@
      "вниз"
     ],
     "a": 2
+   },
+   {
+    "q": "Максимальный запас — 3 000 паллет площадью 0,96 м², стеллажи в 4 яруса, коэффициент использования площади — 0,4. Площадь зоны хранения равна:",
+    "opts": [
+     "2 769 м²",
+     "720 м²",
+     "4 500 м²",
+     "1 800 м²"
+    ],
+    "a": 3
+   },
+   {
+    "q": "Как изменится площадь зоны хранения при переходе с 4 на 6 ярусов стеллажей при прочих равных?",
+    "opts": [
+     "сократится вдвое",
+     "сократится на треть",
+     "увеличится в 1,5 раза",
+     "не изменится"
+    ],
+    "a": 1
    }
   ],
   "pz": 7
@@ -1538,6 +2058,38 @@
    "TMS",
    "GPS-мониторинг",
    "телематика"
+  ],
+  "articles": [
+   {
+    "t": "CSCMP, Kearney. 37th Annual State of Logistics Report. — 2026; обзор: Supply Chain Digest. State of Logistics 2026.",
+    "u": "https://www.scdigest.com/firstthoughts/26-06-26.php"
+   },
+   {
+    "t": "Национальный комитет Республики Узбекистан по статистике. Грузоперевозки в 2020–2024 гг. // UzDaily. — 16.03.2025.",
+    "u": "https://www.uzdaily.uz/ru/v-2024-godu-obem-gruzoperevozok-v-uzbekistane-dostig-rekordnykh-15-mlrd-tonn/"
+   },
+   {
+    "t": "Clarke G., Wright J. W. Scheduling of Vehicles from a Central Depot to a Number of Delivery Points // Operations Research. — 1964. — Vol. 12, no. 4. — P. 568–581.",
+    "u": "https://doi.org/10.1287/opre.12.4.568"
+   },
+   {
+    "t": "Hitchcock F. L. The Distribution of a Product from Several Sources to Numerous Localities // Journal of Mathematics and Physics. — 1941. — Vol. 20. — P. 224–230.",
+    "u": "https://doi.org/10.1002/sapm1941201224"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитывается экономия в методе Кларка — Райта и по каким правилам объединяются маршруты?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Сравните виды транспорта по основным критериям выбора."
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Составьте план развозки для шести магазинов с учётом грузоподъёмности машин и временных окон."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1665,6 +2217,26 @@
      "затрат к выручке"
     ],
     "a": 2
+   },
+   {
+    "q": "Расстояния от склада до клиентов 1 и 2 — 10 и 12 км, между клиентами — 6 км. Экономия от объединения клиентов в один маршрут по методу Кларка — Райта равна:",
+    "opts": [
+     "28 км",
+     "16 км",
+     "22 км",
+     "4 км"
+    ],
+    "a": 1
+   },
+   {
+    "q": "Пара клиентов с наибольшей экономией не вошла в один маршрут. Наиболее вероятная причина:",
+    "opts": [
+     "экономия оказалась отрицательной",
+     "метод запрещает объединять ближайших клиентов",
+     "клиенты расположены слишком близко друг к другу",
+     "суммарный груз превысил бы грузоподъёмность машины"
+    ],
+    "a": 3
    }
   ],
   "pz": 8
@@ -1686,6 +2258,38 @@
    "модель размещения объектов",
    "смешанное целочисленное программирование",
    "цифровой двойник сети"
+  ],
+  "articles": [
+   {
+    "t": "Национальный комитет Республики Узбекистан по статистике. Численность постоянного населения по регионам на 1 апреля 2026 года.",
+    "u": "https://stat.uz/ru/press-tsentr/novosti-goskomstata/68040-ajsi-udud-a-olisi-eng-k-p-4"
+   },
+   {
+    "t": "Maister D. H. Centralisation of Inventories and the “Square Root Law” // International Journal of Physical Distribution. — 1976. — Vol. 6, no. 3. — P. 124–134.",
+    "u": "https://doi.org/10.1108/eb014366"
+   },
+   {
+    "t": "Simchi-Levi D., Kaminsky P., Simchi-Levi E. Designing and Managing the Supply Chain: Concepts, Strategies, and Case Studies. — 4th ed. — New York: McGraw-Hill, 2022.",
+    "u": "https://www.mheducation.com/highered/product/designing-and-managing-the-supply-chain-simchi-levi.html"
+   },
+   {
+    "t": "Правительственный портал Республики Узбекистан. Рассмотрены предложения по развитию транспортно-логистической системы. — 01.07.2026.",
+    "u": "https://gov.uz/ru/news/view/186278"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Что такое средневзвешенная дальность доставки и как её рассчитать?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Как меняются составляющие затрат сети с ростом числа РЦ?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Предложите конфигурацию сети распределительных центров для национальной аптечной сети Узбекистана и обоснуйте её."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1805,6 +2409,26 @@
      "смешанного целочисленного программирования"
     ],
     "a": 3
+   },
+   {
+    "q": "Страховой запас при одном РЦ — 1 000 ед. По закону квадратного корня при четырёх РЦ суммарный страховой запас составит:",
+    "opts": [
+     "500 ед.",
+     "4 000 ед.",
+     "1 000 ед.",
+     "2 000 ед."
+    ],
+    "a": 3
+   },
+   {
+    "q": "Что происходит при увеличении числа распределительных центров в сети?",
+    "opts": [
+     "все составляющие затрат снижаются",
+     "все составляющие затрат растут",
+     "затраты не меняются, меняется только сервис",
+     "затраты на доставку клиентам снижаются, а затраты на склады и запасы растут"
+    ],
+    "a": 3
    }
   ],
   "pz": 9
@@ -1826,6 +2450,38 @@
    "анализ чувствительности",
    "пропускная способность терминала",
    "ДФЭУ (TEU)"
+  ],
+  "articles": [
+   {
+    "t": "Weber A. Über den Standort der Industrien. — Tübingen: J. C. B. Mohr, 1909.",
+    "u": "https://archive.org/details/ueberdenstandort00webeuoft"
+   },
+   {
+    "t": "Ballou R. H. Business Logistics/Supply Chain Management: Planning, Organizing, and Controlling the Supply Chain. — 5th ed. — Upper Saddle River: Pearson Prentice Hall, 2004.",
+    "u": "https://library.bracu.ac.bd/vufind/Record/1780"
+   },
+   {
+    "t": "Khorgos Gateway Boosts Transit Capacity, Handles Over 372,000 TEUs in 2025 // The Astana Times. — 02.2026.",
+    "u": "https://astanatimes.com/2026/02/khorgos-gateway-boosts-transit-capacity-handles-over-372000-teus-in-2025/"
+   },
+   {
+    "t": "Дефицит складов класса «А» в Узбекистане: оценки Всемирного банка // Spot.uz. — 17.07.2026.",
+    "u": "https://www.spot.uz/ru/2026/07/17/real-estate/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитываются координаты центра тяжести и каковы ограничения этого метода?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "По какому принципу размещены зоны транспортно-логистической специализации Узбекистана?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Предложите место размещения и состав функциональных зон логистического центра для своего региона."
+   }
   ],
   "outcomes": {
    "know": [
@@ -1945,6 +2601,26 @@
      "объединяет складские, транспортные, таможенные и сервисные услуги для многих пользователей"
     ],
     "a": 3
+   },
+   {
+    "q": "Пункт (0; 0) с объёмом 300 т и пункт (40; 10) с объёмом 100 т. Координаты центра тяжести грузопотоков:",
+    "opts": [
+     "(10; 2,5)",
+     "(10; 5)",
+     "(40; 10)",
+     "(20; 5)"
+    ],
+    "a": 0
+   },
+   {
+    "q": "Почему центр тяжести нельзя считать окончательным местом размещения РЦ?",
+    "opts": [
+     "метод учитывает только стоимость земли",
+     "координаты центра тяжести нельзя рассчитать точно",
+     "центр тяжести всегда находится в столице",
+     "метод не учитывает дорожную сеть, стоимость земли и наличие реальных площадок"
+    ],
+    "a": 3
    }
   ],
   "pz": 9
@@ -1965,6 +2641,38 @@
    "внутренняя норма доходности (IRR)",
    "срок окупаемости",
    "ставка дисконтирования"
+  ],
+  "articles": [
+   {
+    "t": "CSCMP, Kearney. 37th Annual State of Logistics Report. — 2026; обзор: Supply Chain Digest. State of Logistics 2026.",
+    "u": "https://www.scdigest.com/firstthoughts/26-06-26.php"
+   },
+   {
+    "t": "Kaplan R. S., Anderson S. R. Time-Driven Activity-Based Costing: A Simpler and More Powerful Path to Higher Profits. — Boston: Harvard Business School Press, 2007.",
+    "u": "https://www.hbs.edu/faculty/Pages/item.aspx?num=23236"
+   },
+   {
+    "t": "Brealey R. A., Myers S. C., Allen F., Edmans A. Principles of Corporate Finance. — 14th ed. — New York: McGraw-Hill, 2023.",
+    "u": "https://www.mheducation.com/highered/product/principles-of-corporate-finance-brealey.html"
+   },
+   {
+    "t": "Дефицит складов класса «А» в Узбекистане: оценки Всемирного банка // Spot.uz. — 17.07.2026.",
+    "u": "https://www.spot.uz/ru/2026/07/17/real-estate/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитать затраты на обслуживание клиента и какие решения принимаются по его результатам?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему цена уровня сервиса растёт нелинейно? Приведите расчёт."
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте программу снижения логистических затрат предприятия на 10 % с указанием мер и их эффекта."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2080,6 +2788,26 @@
      "случайными"
     ],
     "a": 2
+   },
+   {
+    "q": "Инвестиции — 800 млн сумов, ежегодный денежный поток — 260 млн сумов в течение 5 лет, сумма коэффициентов дисконтирования при 18 % — 3,1272. NPV проекта примерно равна:",
+    "opts": [
+     "500 млн сумов",
+     "1 300 млн сумов",
+     "13,1 млн сумов",
+     "−13,1 млн сумов"
+    ],
+    "a": 2
+   },
+   {
+    "q": "IRR проекта — 18,7 % при ставке дисконтирования 18 %. Какой вывод верен?",
+    "opts": [
+     "проект эффективен, но запас прочности мал",
+     "проект очень надёжен и не требует анализа чувствительности",
+     "IRR не влияет на решение",
+     "проект неэффективен"
+    ],
+    "a": 0
    }
   ],
   "pz": 10
@@ -2100,6 +2828,38 @@
    "время выживания (TTS)",
    "время восстановления (TTR)",
    "устойчивость цепи поставок (resilience)"
+  ],
+  "articles": [
+   {
+    "t": "Allianz Commercial. Allianz Risk Barometer 2026: Cyber remains top business risk but AI fastest riser at #2. — 14.01.2026.",
+    "u": "https://commercial.allianz.com/news-and-insights/news/allianz-risk-barometer-2026.html"
+   },
+   {
+    "t": "Notteboom T., Pallis A., Rodrigue J.-P. Blockage of the Suez Canal, March 2021 // Port Economics, Management and Policy.",
+    "u": "https://porteconomicsmanagement.org/?p=9993"
+   },
+   {
+    "t": "ISO 31000:2018. Risk management — Guidelines. — Geneva: ISO, 2018.",
+    "u": "https://www.iso.org/standard/65694.html"
+   },
+   {
+    "t": "Simchi-Levi D., Schmidt W., Wei Y. From Superstorms to Factory Fires: Managing Unpredictable Supply-Chain Disruptions // Harvard Business Review. — 2014. — Vol. 92, no. 1–2. — P. 96–101.",
+    "u": "https://hbr.org/2014/01/from-superstorms-to-factory-fires-managing-unpredictable-supply-chain-disruptions"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как строится матрица рисков и как по ней определяют приоритеты?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Какие уроки для логистики можно извлечь из блокировки Суэцкого канала в 2021 году?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте план непрерывности логистики дистрибьютора на случай закрытия основного пограничного перехода."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2215,6 +2975,26 @@
      "финансовый цикл"
     ],
     "a": 1
+   },
+   {
+    "q": "Вероятность срыва поставки за год — 0,2, ущерб — 500 млн сумов. Ожидаемый ущерб равен:",
+    "opts": [
+     "0,2 млн сумов",
+     "2 500 млн сумов",
+     "100 млн сумов",
+     "500 млн сумов"
+    ],
+    "a": 2
+   },
+   {
+    "q": "Риск пожара: вероятность — 0,02, ущерб — 4 000 млн сумов (ожидаемый ущерб — 80 млн). Защита стоит 90 млн сумов в год. Какой вывод верен?",
+    "opts": [
+     "мера всегда выгодна, так как ущерб велик",
+     "мера бесполезна, риск можно игнорировать",
+     "редкие риски не учитываются в управлении",
+     "по ожидаемому ущербу мера не окупается, но катастрофический риск всё равно требует защиты или страхования"
+    ],
+    "a": 3
    }
   ],
   "pz": 11
@@ -2238,6 +3018,38 @@
    "оборачиваемость запасов",
    "«шесть сигм»",
    "DPMO"
+  ],
+  "articles": [
+   {
+    "t": "ISO 9001:2015. Quality management systems — Requirements. — Geneva: ISO, 2015.",
+    "u": "https://www.iso.org/standard/62085.html"
+   },
+   {
+    "t": "ISO Survey of Management System Standard Certifications 2024: infographic // Global Standards. — 2025.",
+    "u": "https://www.globalstd.com/wp-content/uploads/2025/10/Infografia-ISO-Survey-2024_EN.pdf"
+   },
+   {
+    "t": "Mentzer J. T., Flint D. J., Hult G. T. M. Logistics Service Quality as a Segment-Customized Process // Journal of Marketing. — 2001. — Vol. 65, no. 4. — P. 82–104.",
+    "u": "https://doi.org/10.1509/jmkg.65.4.82.18390"
+   },
+   {
+    "t": "ASCM. SCOR Digital Standard (Supply Chain Operations Reference).",
+    "u": "https://www.ascm.org/corporate-solutions/standards-tools/scor-ds/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Опишите цикл PDCA на примере улучшения процесса отгрузки."
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Как строится дерево показателей и зачем оно нужно?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Постройте дерево KPI для транспортного отдела и назначьте ответственных за каждый показатель."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2365,6 +3177,26 @@
      "реклама"
     ],
     "a": 0
+   },
+   {
+    "q": "Из 2 000 заказов вовремя и полностью выполнено 1 840. Показатель OTIF равен:",
+    "opts": [
+     "96 %",
+     "92 %",
+     "94 %",
+     "90 %"
+    ],
+    "a": 1
+   },
+   {
+    "q": "Доля заказов «вовремя» — 94 %, «полностью» — 96 %. Почему OTIF нельзя считать как 94 % × 96 %?",
+    "opts": [
+     "так считать можно, это стандартная формула",
+     "события зависят друг от друга, поэтому OTIF считают по фактическим заказам",
+     "OTIF учитывает только сроки",
+     "доли нужно складывать"
+    ],
+    "a": 1
    }
   ],
   "pz": 12
@@ -2389,6 +3221,38 @@
    "телематика",
    "электронная накладная (e-CMR)",
    "прослеживаемость"
+  ],
+  "articles": [
+   {
+    "t": "GS1 General Specifications Standard. Release 25.0. — Brussels: GS1, 2025.",
+    "u": "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications"
+   },
+   {
+    "t": "RAIN Alliance Report: Shipments of 52.8bn RAIN Tag Chips Globally in 2024 // RAIN RFID Alliance. — 2025.",
+    "u": "https://therainalliance.org/rain-alliance-report-shipments-of-52-8bn-rain-tag-chips-globally-in-2024"
+   },
+   {
+    "t": "Additional Protocol on the Electronic Consignment Note to enter into force for Uzbekistan // Посольство Республики Узбекистан в Республике Казахстан. — 2021.",
+    "u": "https://uzembassy.kz/en/article/additional-protocol-on-the-electronic-consignment-note-to-enter-into-force-for-uzbekistan"
+   },
+   {
+    "t": "Uzbekistan launches system of electronic waybills in cargo transportation // Kun.uz. — 15.01.2021.",
+    "u": "https://kun.uz/en/news/2021/01/14/uzbekistan-launches-system-of-electronic-waybills-in-cargo-transportation"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Из каких составляющих складывается экономический эффект WMS?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Сравните штрихкод, RFID и IoT по способу считывания, стоимости и данным."
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Составьте техническое задание на выбор WMS для склада дистрибьютора: функции, интеграции, критерии выбора."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2520,6 +3384,26 @@
      "росту страхового запаса"
     ],
     "a": 1
+   },
+   {
+    "q": "Склад обрабатывает 800 000 строк в год; доля ошибок снизилась с 0,4 до 0,1 %, исправление одной ошибки стоит 50 тыс. сумов. Годовая экономия равна:",
+    "opts": [
+     "40 млн сумов",
+     "120 млн сумов",
+     "160 млн сумов",
+     "400 млн сумов"
+    ],
+    "a": 1
+   },
+   {
+    "q": "Почему внедрению WMS должно предшествовать упорядочение складских процессов?",
+    "opts": [
+     "порядок внедрения не влияет на результат",
+     "WMS работает только на новых складах",
+     "без упорядочения нельзя купить лицензию",
+     "иначе система автоматизирует неэффективные процессы и ожидаемый эффект не будет достигнут"
+    ],
+    "a": 3
    }
   ],
   "pz": 13
@@ -2541,6 +3425,38 @@
    "автономные мобильные роботы (AMR)",
    "точность прогноза",
    "MAPE"
+  ],
+  "articles": [
+   {
+    "t": "Kagermann H., Wahlster W., Helbig J. Recommendations for Implementing the Strategic Initiative INDUSTRIE 4.0: Final Report of the Industrie 4.0 Working Group. — Frankfurt am Main: acatech, 2013.",
+    "u": "https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/"
+   },
+   {
+    "t": "Laney D. 3D Data Management: Controlling Data Volume, Velocity, and Variety // META Group Application Delivery Strategies. — 2001. — File 949.",
+    "u": "https://community.aiim.org/blogs/doug-laney/2012/08/25/deja-vvvu-gartners-original-volume-velocity-variety-definition-of-big-data"
+   },
+   {
+    "t": "Succeeding in the AI supply-chain revolution // McKinsey & Company. — 30.04.2021.",
+    "u": "https://www.mckinsey.com/industries/metals-and-mining/our-insights/succeeding-in-the-ai-supply-chain-revolution"
+   },
+   {
+    "t": "Amazon’s Robot Fleet Hits 1-Million Milestone, Boosts Efficiency by 10% // eWeek. — 02.07.2025.",
+    "u": "https://www.eweek.com/news/amazon-robots-automation-jobs/"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитывается MAPE и как точность прогноза влияет на страховой запас?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Когда автоматизация склада экономически оправдана?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Предложите проект применения ИИ в одном логистическом процессе предприятия: данные, модель, ожидаемый эффект."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2660,6 +3576,26 @@
      "число клиентов"
     ],
     "a": 2
+   },
+   {
+    "q": "Факт продаж — 100 и 200 ед., прогноз — 90 и 220 ед. MAPE прогноза равна:",
+    "opts": [
+     "30 %",
+     "10 %",
+     "15 %",
+     "5 %"
+    ],
+    "a": 1
+   },
+   {
+    "q": "После внедрения ИИ-прогнозирования MAPE снизилась с 20 до 10 %. Как это повлияет на страховой запас?",
+    "opts": [
+     "станет равным нулю",
+     "вырастет",
+     "не изменится",
+     "снизится, так как уменьшится неопределённость спроса"
+    ],
+    "a": 3
    }
   ],
   "pz": 13
@@ -2681,6 +3617,38 @@
    "замкнутая цепь поставок",
    "циркулярная экономика",
    "коэффициент восстановления стоимости"
+  ],
+  "articles": [
+   {
+    "t": "Ritchie H. Cars, planes, trains: where do CO2 emissions from transport come from? // Our World in Data. — 2020.",
+    "u": "https://ourworldindata.org/co2-emissions-from-transport"
+   },
+   {
+    "t": "NRF and Happy Returns Report: 2024 Retail Returns to Total $890 Billion // National Retail Federation. — 05.12.2024.",
+    "u": "https://nrf.com/media-center/press-releases/nrf-and-happy-returns-report-2024-retail-returns-total-890-billion"
+   },
+   {
+    "t": "ISO 14083:2023. Greenhouse gases — Quantification and reporting of greenhouse gas emissions arising from transport chain operations. — Geneva: ISO, 2023.",
+    "u": "https://www.iso.org/standard/78864.html"
+   },
+   {
+    "t": "Smart Freight Centre. Global Logistics Emissions Council Framework for Logistics Emissions Accounting and Reporting. Version 3.1. — Amsterdam, 2025.",
+    "u": "https://publica.fraunhofer.de/handle/publica/483909"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитываются выбросы CO₂ и удельные выбросы на т-км?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему смена вида транспорта даёт наибольший эффект? Какие ограничения у этой меры?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте программу зелёной логистики для автопарка из 20 грузовиков с целевым снижением выбросов."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2800,6 +3768,26 @@
      "переработка"
     ],
     "a": 2
+   },
+   {
+    "q": "Автопарк израсходовал за год 60 000 л дизельного топлива (2,68 кг CO₂ на литр). Выбросы CO₂ составили:",
+    "opts": [
+     "2,68 т",
+     "1 608 т",
+     "22,4 т",
+     "160,8 т"
+    ],
+    "a": 3
+   },
+   {
+    "q": "Какая мера одновременно снижает выбросы и логистические затраты?",
+    "opts": [
+     "частые поставки малыми партиями",
+     "переход на экспресс-доставку",
+     "увеличение порожних пробегов",
+     "повышение загрузки машин и оптимизация маршрутов"
+    ],
+    "a": 3
    }
   ],
   "pz": 14
@@ -2820,6 +3808,26 @@
    "нормирование оценок",
    "поэтапное внедрение",
    "дорожная карта проекта"
+  ],
+  "articles": [
+   {
+    "t": "Национальный комитет Республики Узбекистан по статистике. Численность постоянного населения по регионам на 1 апреля 2026 года.",
+    "u": "https://stat.uz/ru/press-tsentr/novosti-goskomstata/68040-ajsi-udud-a-olisi-eng-k-p-4"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как выполняется многокритериальная оценка вариантов? Как нормируются показатели?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Назовите типичные ошибки проектирования логистических систем."
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Выполните эскизный проект логистической системы выбранного предприятия по этапам методологии."
+   }
   ],
   "outcomes": {
    "know": [
@@ -2935,6 +3943,26 @@
      "изменением весов критериев"
     ],
     "a": 3
+   },
+   {
+    "q": "Вариант получил 8 баллов (из 10) по затратам и 6 баллов по сервису; веса критериев — 0,6 и 0,4. Взвешенная оценка варианта:",
+    "opts": [
+     "7,2",
+     "7,0",
+     "6,0",
+     "14,0"
+    ],
+    "a": 0
+   },
+   {
+    "q": "Как проверить устойчивость выбора варианта при многокритериальной оценке?",
+    "opts": [
+     "изменить веса критериев и проверить, сохраняется ли лидер",
+     "увеличить число вариантов",
+     "выбрать вариант с наименьшими затратами",
+     "отказаться от нормирования показателей"
+    ],
+    "a": 0
    }
   ],
   "pz": 15
@@ -2956,6 +3984,38 @@
    "диаграмма «торнадо»",
    "тенденции развития логистики",
    "регионализация цепей поставок"
+  ],
+  "articles": [
+   {
+    "t": "Указ Президента Республики Узбекистан от 28.01.2022 № УП-60 «О Стратегии развития Нового Узбекистана на 2022–2026 годы».",
+    "u": "https://lex.uz/ru/docs/5841077"
+   },
+   {
+    "t": "Указ Президента Республики Узбекистан от 11.09.2023 № УП-158 «О Стратегии „Узбекистан — 2030“».",
+    "u": "https://lex.uz/ru/docs/6600404"
+   },
+   {
+    "t": "Мирзиёев Ш. М. Критический анализ, жёсткая дисциплина и персональная ответственность должны стать повседневной нормой в деятельности каждого руководителя: доклад на расширенном заседании Кабинета Министров, посвящённом итогам 2016 года и перспективам на 2017 год // Народное слово. — 2017. — 16 января, № 11.",
+    "u": "https://president.uz/ru/lists/view/186"
+   },
+   {
+    "t": "President Mirziyoyev directs Ministry of Transport to develop trade routes bypassing problematic countries // Kun.uz. — 13.01.2025.",
+    "u": "https://kun.uz/en/news/2025/01/13/president-mirziyoyev-directs-ministry-of-transport-to-develop-trade-routes-bypassing-problematic-countries"
+   }
+  ],
+  "exercises": [
+   {
+    "lvl": "Уровень 1 — применение",
+    "q": "Как рассчитывается интегральный показатель? В чём его достоинства и ограничения?"
+   },
+   {
+    "lvl": "Уровень 2 — анализ",
+    "q": "Почему затраты на тонну снижаются при росте объёма перевозок?"
+   },
+   {
+    "lvl": "Уровень 3 — создание",
+    "q": "Разработайте дорожную карту развития логистической системы предприятия на три года по итогам аудита."
+   }
   ],
   "outcomes": {
    "know": [
@@ -3075,6 +4135,26 @@
      "эффекта масштаба (распределения постоянных затрат)"
     ],
     "a": 3
+   },
+   {
+    "q": "Степень достижения цели по двум KPI — 90 и 70 %, веса показателей одинаковые (0,5). Интегральный показатель равен:",
+    "opts": [
+     "160 %",
+     "70 %",
+     "63 %",
+     "80 %"
+    ],
+    "a": 3
+   },
+   {
+    "q": "Что показывает диаграмма «торнадо» в анализе чувствительности?",
+    "opts": [
+     "какие параметры сильнее всего влияют на результат",
+     "уровень зрелости логистической системы",
+     "структуру логистических затрат",
+     "динамику затрат по месяцам"
+    ],
+    "a": 0
    }
   ],
   "pz": 15

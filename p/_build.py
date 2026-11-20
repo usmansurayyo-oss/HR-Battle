@@ -100,6 +100,11 @@ def sec_html(s, prev, nxt):
             f'<label><input type="radio" name="q{k}" value="{i}"> {"абвг"[i]}) {html.escape(t)}</label>'
             for i, t in enumerate(q["opts"]))
         qs += f'<div class="q" data-a="{q["a"]}"><b>{k + 1}. {html.escape(q["q"])}</b>{opts}</div>'
+    exercises = "".join(
+        f'<p style="margin:0 0 10px"><b>{html.escape(e["lvl"])}.</b> {html.escape(e["q"])}</p>'
+        for e in s["exercises"])
+    articles = "".join(
+        f'<li><a href="{html.escape(a["u"])}">{html.escape(a["t"])}</a></li>' for a in s["articles"])
     pz = s["pz"]
     vid, vtitle = VIDEO[pz]
     nav = '<div class="nav">'
@@ -130,6 +135,14 @@ def sec_html(s, prev, nxt):
 <p id="score"></p>
 </section>
 
+<section class="card"><h2>🧩 Упражнения возрастающей сложности</h2>
+{exercises}
+</section>
+
+<section class="card"><h2>📚 Статьи и источники</h2>
+<ul>{articles}</ul>
+</section>
+
 <section class="card"><h2>▶ Видео и практика</h2>
 <a class="video" href="https://www.youtube.com/watch?v={vid}" data-vid="{vid}">
 <img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy"><span class="play">▶</span></a>
@@ -146,7 +159,7 @@ def index_html():
     body = f"""
 <p class="book">{html.escape(AUTHOR)}</p>
 <h1>{html.escape(BOOK)}</h1>
-<p class="goal">Материалы к параграфам: цели, интерактивный глоссарий, тест для самопроверки, видео и практика.</p>
+<p class="goal">Материалы к параграфам: цели, интерактивный глоссарий, тест по таксономии Блума, упражнения, статьи, видео и практика.</p>
 <section class="card list">{items}</section>
 <p class="goal"><a href="../pz/">Практические занятия →</a></p>
 """
