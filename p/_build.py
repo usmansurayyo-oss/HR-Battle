@@ -22,6 +22,7 @@ BASE_URL = "https://usmansurayyo-oss.github.io/HR-Battle/p/"
 DATA = json.load(open(os.path.join(HERE, "_data.json"), encoding="utf-8"))
 VIDEO = {L["n"]: L["video"] for L in LESSONS}
 PZ_TITLE = {L["n"]: L["title"] for L in LESSONS}
+NUM = {s["n"]: s["num"] for s in DATA}
 
 EXTRA_CSS = """
 .term{border-bottom:1px solid var(--line);padding:8px 0}
@@ -108,13 +109,13 @@ def sec_html(s, prev, nxt):
     pz = s["pz"]
     vid, vtitle = VIDEO[pz]
     nav = '<div class="nav">'
-    nav += f'<a href="../{prev}/">← § {prev}</a>' if prev else "<span></span>"
+    nav += f'<a href="../{prev}/">← {NUM[prev]}</a>' if prev else "<span></span>"
     nav += '<a href="../">Все параграфы</a>'
-    nav += f'<a href="../{nxt}/">§ {nxt} →</a>' if nxt else "<span></span>"
+    nav += f'<a href="../{nxt}/">{NUM[nxt]} →</a>' if nxt else "<span></span>"
     nav += "</div>"
     body = f"""
 <p class="book">{html.escape(BOOK)}</p>
-<span class="num">§ {s['n']}</span>
+<span class="num">Параграф {s['num']}</span>
 <h1>{html.escape(s['title'])}</h1>
 
 <section class="card idea"><h2>🎯 Что вы освоите</h2>
@@ -151,11 +152,11 @@ def sec_html(s, prev, nxt):
 </section>
 {nav}
 """
-    return page(f"§ {s['n']}. {s['title']}", body, TEST_JS + THUMB_JS)
+    return page(f"{s['num']}. {s['title']}", body, TEST_JS + THUMB_JS)
 
 
 def index_html():
-    items = "".join(f'<a href="{s["n"]}/"><b>§ {s["n"]}</b>{html.escape(s["title"])}</a>' for s in DATA)
+    items = "".join(f'<a href="{s["n"]}/"><b>{s["num"]}</b>{html.escape(s["title"])}</a>' for s in DATA)
     body = f"""
 <p class="book">{html.escape(AUTHOR)}</p>
 <h1>{html.escape(BOOK)}</h1>
